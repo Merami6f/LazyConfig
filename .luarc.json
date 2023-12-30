@@ -1,5 +1,5 @@
 {
-  "diagnostics.globals": ["vim"],
+  "diagnostics.globals": ["vim","bufnr"],
     "diagnostics.disable": [
         "different-requires"
     ]
