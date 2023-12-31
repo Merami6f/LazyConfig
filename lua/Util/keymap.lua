@@ -45,8 +45,8 @@ map("n", "<leader>fe", "<Cmd>Neotree<CR>", opts, { desc = "Neotree Explore (root
 map("n", "<leader>fc", "<Cmd>Neotree close<CR>", opts, { desc = "Neotree close" })
 -- Telescope
 map("n", "<leader>ft", "<Cmd>Telescope<CR>", opts, { desc = "Open Telescope" })
-map("n", "<leader>ftf", "<Cmd>Telescope find_files<CR>", opts, { desc = "Telescope find_files" })
-map("n", "<leader>ftg", "<Cmd>Telescope live_grep<CR>", opts, { desc = "Telescope live_grep" })
+map("n", "<leader>fd", "<Cmd>Telescope find_files<CR>", opts, { desc = "Telescope find_files" })
+map("n", "<leader>fg", "<Cmd>Telescope live_grep<CR>", opts, { desc = "Telescope live_grep" })
 
 -- ---- LSP config ---- --
 -- @param desc (string|nil)

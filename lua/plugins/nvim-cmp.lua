@@ -1,19 +1,17 @@
--- WARN: friendly snippet doesnt work
 return {
   {
     "hrsh7th/nvim-cmp",
-    Lazy = false,
+    event = "InsertEnter",
     dependencies = {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-cmdline",
       'hrsh7th/cmp-nvim-lsp',
+      'saadparwaiz1/cmp_luasnip',
       "L3MON4D3/LuaSnip",
-      "rafamadriz/friendly-snippets",
     },
     config = function()
       local cmp = require("cmp")
-      require("luasnip.loaders.from_vscode").lazy_load()
       cmp.setup({
         snippet = {
           expand = function(args)
@@ -34,7 +32,7 @@ return {
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
           -- { name = 'vsnip' }, -- For vsnip users.
-          { name = "luasnip" }, -- For luasnip users.
+          { name = "luasnip", option = { use_show_condition = false } }, -- For luasnip users.
           -- { name = 'ultisnips' }, -- For ultisnips users.
           -- { name = 'snippy' }, -- For snippy users.
         }, {
@@ -66,9 +64,15 @@ return {
       lspconfig.lua_ls.setup({
         capabilities = capabilities
       })
-      lspconfig.cland.setup({
-        capabilities = capabilities
-      })
+      -- lspconfig.cland.setup({
+      --   capabilities = capabilities
+      -- })
     end,
   },
+  {
+    "rafamadriz/friendly-snippets",
+    config = function()
+      require("luasnip.loaders.from_vscode").lazy_load()
+    end,
+  }
 }
