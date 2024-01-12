@@ -106,7 +106,15 @@ return {
         },
         sources = cmp.config.sources({
           { name = "luasnip", option = { use_show_condition = true } }, -- For luasnip users.
-          { name = "nvim_lsp" },
+          {
+            name = "nvim_lsp",
+            entry_filter = function(entry, ctx)
+              if entry:get_kind() == 15 then
+                return false
+              end
+              return true
+            end
+          },
         }, {
           { name = "buffer" },
           { name = "path" }

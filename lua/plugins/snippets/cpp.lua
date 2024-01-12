@@ -22,10 +22,10 @@ return {
     i(1, "STL"),
     t("\"")
   }),
-  s({ trig = "print([%w_]+)", regTrig = true },
+  s({ trig = "cout([%w_]+)", regTrig = true },
     f(function(_, snip)
       return
-          "printf(\"" .. snip.captures[1] .. "\");"
+          "std::cout<<\"" .. snip.captures[1] .. "\""
     end, {})
   ),
   s({ trig = "void([%w_]+)", regTrig = true },

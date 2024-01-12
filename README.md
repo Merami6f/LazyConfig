@@ -1,4 +1,2 @@
-# LazyConfig
-
-# install 
-git clone git@github.com:Merami6f/LazyConfig.git ~/.config/nvim 
+# install.
+> git clone git@github.com:Merami6f/LazyConfig.git ~/.config/nvim 

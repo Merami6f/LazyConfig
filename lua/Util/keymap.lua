@@ -4,6 +4,12 @@
 local map = vim.keymap.set
 local opts = { noremap = true }
 
+
+-- navigate
+-- thanks to theprimeagent
+map("v", "J", ":m '>+1<CR>gv=gv")
+map("v", "K", ":m '<-2<CR>gv=gv")
+
 -- save file
 map("n", "<C-s>", "<Cmd>s<CR>", opts, { desc = "Save Current Buff" })
 map("n", "<C-S>", "<Cmd>sa<CR>", opts, { desc = "Save All Buff" })
@@ -12,11 +18,11 @@ map("n", "<C-S>", "<Cmd>sa<CR>", opts, { desc = "Save All Buff" })
 
 -- comments
 map("n", "<leader>t", "<Cmd>TodoQuickFix<CR>", { desc = "Toggle TODO" })
-vim.keymap.set("n", "]t", function()
+map("n", "]t", function()
   require("todo-comments").jump_next()
 end, { desc = "Next todo comment" })
 
-vim.keymap.set("n", "[t", function()
+map("n", "[t", function()
   require("todo-comments").jump_prev()
 end, { desc = "Previous todo comment" })
 -- Windows's
