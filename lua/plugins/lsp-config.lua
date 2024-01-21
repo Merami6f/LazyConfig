@@ -32,6 +32,7 @@ return {
       local lspconfig = require("lspconfig")
       lspconfig.clangd.setup {}
       lspconfig.cmake.setup {}
+      lspconfig.bashls.setup {}
       lspconfig.dartls.setup({})
       lspconfig.lua_ls.setup({
         settings = {
