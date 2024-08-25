@@ -1,5 +1,7 @@
 local opts = { noremap = true }
 
+-- use "gw" to worp line
+
 vim.keymap.set("n", "<leader>e", "<Cmd>:Ex<CR>", { desc = "File Explore" })
 vim.keymap.set("n", "<leader>E", "<Cmd>:25Lex<CR>", { desc = "Side File Exploler" })
 
@@ -24,7 +26,7 @@ vim.keymap.set("n", "<leader>wv", "<Cmd>vsplit<CR>", opts, { desc = "Vertical Sp
 vim.keymap.set("n", "<leader>wh", "<Cmd>split<CR>", opts, { desc = "Horizontal Split" })
 vim.keymap.set("n", "<leader>wq", "<Cmd>q<CR>", opts, { desc = "Windows quit" })
 
---buffer
-vim.keymap.set("n", "<leader>b", "<Cmd>:ls<CR>", opts, { desc = "Buffer List" })
-vim.keymap.set("n", "<leader>bn", "<Cmd>bNext<CR>", opts, { desc = "Buffer go Next" })
-vim.keymap.set("n", "<leader>bm", "<Cmd>bprevious<CR>", opts, { desc = "Buffer go Previous" })
+--Telescope
+vim.keymap.set("n", "<leader>b", "<Cmd>:Telescope buffers<CR>", { desc = "Lists buffer with Telescope" })
+vim.keymap.set("n", "<leader>fg", "<Cmd>:Telescope live_grep<CR>", { desc = "live_greb with Telescope" })
+vim.keymap.set("n", "<leader>fh", "<Cmd>:Telescope help_tags<CR>", { desc = " Lists help with Telescope" })

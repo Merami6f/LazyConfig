@@ -21,8 +21,8 @@ return {
       no_bold = false,               -- Force no bold
       no_underline = false,          -- Force no underline
       styles = {                     -- Handles the styles of general hi groups (see `:h highlight-args`):
-        comments = { "italic" },     -- Change the style of comments
-        conditionals = { "italic" },
+        comments = {},               -- Change the style of comments
+        conditionals = {},
         loops = {},
         functions = {},
         keywords = {},
@@ -110,11 +110,11 @@ return {
           blue = "#ffffff",
           lavender = "#ffffff",
           text = "#ffffff",
-          subtext1 = "#bbbbbb",
-          subtext0 = "#aaaaaa",
-          overlay2 = "#999999",
-          overlay1 = "#888888",
-          overlay0 = "#777777",
+          subtext1 = "#e6e6e6",
+          subtext0 = "#c8c8c8",
+          overlay2 = "#dddddd",
+          overlay1 = "#cccccc",
+          overlay0 = "#bbbbbb",
           surface2 = "#565151",
           surface1 = "#3c3838",
           surface0 = "#272525",
@@ -123,7 +123,11 @@ return {
           crust = "#0a0a0a"
         }
       },
-      custom_highlights = {},
+      custom_highlights = function(replace)
+        return {
+          LineNr = { fg = replace.subtext1 },
+        }
+      end,
       default_integrations = true,
       integrations = {
         cmp = true,

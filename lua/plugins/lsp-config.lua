@@ -29,6 +29,7 @@ return {
   },
   config = function()
     local lspconfig = require('lspconfig')
+    lspconfig.markdown_oxide.setup {}
     lspconfig.asm_lsp.setup {}
     lspconfig.clangd.setup {}
     lspconfig.lua_ls.setup({
