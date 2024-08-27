@@ -9,19 +9,19 @@ return {
         light = "latte",
         dark = "mocha",
       },
-      transparent_background = true, -- disables setting the background color.
-      show_end_of_buffer = false,    -- shows the '~' characters after the end of buffers
-      term_colors = true,            -- sets terminal colors (e.g. `g:terminal_color_0`)
+      transparent_background = false, -- disables setting the background color.
+      show_end_of_buffer = false,     -- shows the '~' characters after the end of buffers
+      term_colors = true,             -- sets terminal colors (e.g. `g:terminal_color_0`)
       dim_inactive = {
-        enabled = false,             -- dims the background color of inactive window
+        enabled = false,              -- dims the background color of inactive window
         shade = "dark",
-        percentage = 0.15,           -- percentage of the shade to apply to the inactive window
+        percentage = 0.15,            -- percentage of the shade to apply to the inactive window
       },
-      no_italic = false,             -- Force no italic
-      no_bold = false,               -- Force no bold
-      no_underline = false,          -- Force no underline
-      styles = {                     -- Handles the styles of general hi groups (see `:h highlight-args`):
-        comments = {},               -- Change the style of comments
+      no_italic = false,              -- Force no italic
+      no_bold = false,                -- Force no bold
+      no_underline = false,           -- Force no underline
+      styles = {                      -- Handles the styles of general hi groups (see `:h highlight-args`):
+        comments = {},                -- Change the style of comments
         conditionals = {},
         loops = {},
         functions = {},
@@ -36,6 +36,34 @@ return {
         -- miscs = {}, -- Uncomment to turn off hard-coded styles
       },
       color_overrides = {
+        latte = {
+          rosewater = "#000000",
+          flamingo = "#000000",
+          pink = "#000000",
+          mauve = "#000000",
+          red = "#000000",
+          maroon = "#000000",
+          peach = "#000000",
+          yellow = "#000000",
+          green = "#000000",
+          teal = "#000000",
+          sky = "#000000",
+          sapphire = "#000000",
+          blue = "#000000",
+          lavender = "#000000",
+          text = "#444444",
+          subtext1 = "#555555",
+          subtext0 = "#666666",
+          overlay2 = "#777777",
+          overlay1 = "#888888",
+          overlay0 = "#999999",
+          surface2 = "#aaaaaa",
+          surface1 = "#bbbbbb",
+          surface0 = "#cccccc",
+          base = "#ffffff",
+          mantle = "#eeeeee",
+          crust = "#dddddd",
+        },
         mocha = {
           rosewater = "#ffc0b9",
           flamingo = "#ed1f7c",
@@ -118,9 +146,9 @@ return {
           surface2 = "#565151",
           surface1 = "#3c3838",
           surface0 = "#272525",
-          base = "#0f0d0d",
-          mantle = "#0b0a0a",
-          crust = "#0a0a0a"
+          base = "#1b1b1b",
+          mantle = "#1a1a1a",
+          crust = "#1c1c1c"
         }
       },
       custom_highlights = function(replace)
