@@ -11,7 +11,7 @@ return {
       workspaces = {
         {
           name = "personal",
-          path = "~/Documents/Notes/"
+          path = "~/Notes/obsidian/"
         },
         { ui = { enable = true } }
       }
