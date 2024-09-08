@@ -1,5 +1,6 @@
 local opt = vim.opt
 
+vim.opt_local.conceallevel = 2
 -- Tab / Indentation
 opt.tabstop = 2
 opt.shiftwidth = 2

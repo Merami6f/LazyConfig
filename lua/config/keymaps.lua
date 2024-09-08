@@ -1,14 +1,16 @@
 local opts = { noremap = true }
 
+-- NOTES
+-- use "gw" to warp line
+-- use "$ :! makenotes.sh <filename>" to make note
 
 -- vim file explore
 vim.keymap.set("n", "<leader>e", "<Cmd>:Ex<CR>", { desc = "File Explore" })
 vim.keymap.set("n", "<leader>E", "<Cmd>:25Lex<CR>", { desc = "Side File Exploler" })
 
 -- Navigation: Moving line
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- Move current line down
-vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv")
--- use "gw" to warp line
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line in V-mode DOWN" })
+vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv", { desc = "Move line in V-mode UP" })
 
 --Neotree
 vim.keymap.set("n", "<leader>fc", "<Cmd>:Neotree close<CR>", { desc = "Neotree File close" })

@@ -128,6 +128,9 @@ return {
       lspconfig.lua_ls.setup({
         capabilities = capabilities
       })
+      lspconfig.markdown_oxide.setup({
+        capabilities = capabilities
+      })
     end
   }
 }

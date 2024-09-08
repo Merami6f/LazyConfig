@@ -7,8 +7,8 @@ return {
       Lazy = true,
       config = function()
         require("mason").setup({
-          -- install lua_ls, clang-fornmat via :Mason
-          ensure_installed = { "clangd" },
+          -- install via :Mason
+          ensure_installed = {},
           automatic_installation = true,
           ui = {
             icons = {
